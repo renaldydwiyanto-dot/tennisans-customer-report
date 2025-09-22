@@ -28,6 +28,10 @@ body {
             box-sizing: border-box;
         }
         
+        html {
+            overflow-x: hidden;
+        }
+        
         body {
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
             line-height: 1.6;
@@ -35,21 +39,25 @@ body {
             background: linear-gradient(135deg, #F9F7F2 0%, #536D8A 100%);
             min-height: 100vh;
             position: relative;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
         }
         
         body::before {
-            content: '';
+            content: 'TENNISANS.CRB';
             position: fixed;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIFJvY2tpbmcgY2hhaXIgYmFzZSAtLT4KICA8cGF0aCBkPSJNMjAsODAgUTMwLDg1IDcwLDg1IFE4MCw4MCA4MCw3NSBRNzAsNzAgMzAsNzAgUTIwLDc1IDIwLDgwIiBmaWxsPSJjdXJyZW50Q29sb3IiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8IS0tIENoYWlyIHNlYXQgLS0+CiAgPHJlY3QgeD0iMjUiIHk9IjU1IiB3aWR0aD0iMzUiIGhlaWdodD0iMjAiIHJ4PSIyIiBmaWxsPSJjdXJyZW50Q29sb3IiLz4KICA8IS0tIENoYWlyIGJhY2sgLS0+CiAgPHJlY3QgeD0iNTUiIHk9IjM1IiB3aWR0aD0iOCIgaGVpZ2h0PSIyNSIgcng9IjIiIGZpbGw9ImN1cnJlbnRDb2xvciIvPgogIDwhLS0gVGVubmlzIHBsYXllciBib2R5IC0tPgogIDxlbGxpcHNlIGN4PSI0MCIgY3k9IjQ1IiByeD0iOCIgcnk9IjEyIiBmaWxsPSJjdXJyZW50Q29sb3IiLz4KICA8IS0tIEhlYWQgLS0+CiAgPGNpcmNsZSBjeD0iNDIiIGN5PSIzMCIgcj0iNiIgZmlsbD0iY3VycmVudENvbG9yIi8+CiAgPCEtLSBWaXNvciAtLT4KICA8cGF0aCBkPSJNMzYsMjggUTQyLDI1IDQ4LDI4IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPCEtLSBBcm0gaG9sZGluZyByYWNrZXQgLS0+CiAgPGxpbmUgeDE9IjM1IiB5MT0iNDAiIHgyPSI2NSIgeTI9IjI1IiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPCEtLSBUZW5uaXMgcmFja2V0IC0tPgogIDxlbGxpcHNlIGN4PSI2OCIgY3k9IjIyIiByeD0iOCIgcnk9IjEyIiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPCEtLSBSYWNrZXQgc3RyaW5ncyAoZ3JpZCBwYXR0ZXJuKSAtLT4KICA8ZyBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIwLjUiPgogICAgPGxpbmUgeDE9IjYyIiB5MT0iMTUiIHgyPSI2MiIgeTI9IjI5Ii8+CiAgICA8bGluZSB4MT0iNjUiIHkxPSIxNSIgeDI9IjY1IiB5Mj0iMjkiLz4KICAgIDxsaW5lIHgxPSI2OCIgeTE9IjE1IiB4Mj0iNjgiIHkyPSIyOSIvPgogICAgPGxpbmUgeDE9IjcxIiB5MT0iMTUiIHgyPSI3MSIgeTI9IjI5Ii8+CiAgICA8bGluZSB4MT0iNzQiIHkxPSIxNSIgeDI9Ijc0IiB5Mj0iMjkiLz4KICAgIDxsaW5lIHgxPSI2MSIgeTE9IjE4IiB4Mj0iNzUiIHkyPSIxOCIvPgogICAgPGxpbmUgeDE9IjYxIiB5MT0iMjEiIHgyPSI3NSIgeTI9IjIxIi8+CiAgICA8bGluZSB4MT0iNjEiIHkxPSIyNCIgeDI9Ijc1IiB5Mj0iMjQiLz4KICAgIDxsaW5lIHgxPSI2MSIgeTE9IjI3IiB4Mj0iNzUiIHkyPSIyNyIvPgogIDwvZz4KICA8IS0tIFRlbm5pcyBiYWxsIC0tPgogIDxjaXJjbGUgY3g9Ijc4IiBjeT0iMTUiIHI9IjQiIGZpbGw9ImN1cnJlbnRDb2xvciIvPgogIDxwYXRoIGQ9Ik03NCwxNSBRNzgsMTIgODIsMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPgogIDwhLS0gTGVncyAtLT4KICA8bGluZSB4MT0iMzgiIHkxPSI1NyIgeDI9IjM1IiB5Mj0iNzUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8bGluZSB4MT0iNDIiIHkxPSI1NyIgeDI9IjQ1IiB5Mj0iNzUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8IS0tIFNob2VzIC0tPgogIDxlbGxpcHNlIGN4PSIzMyIgY3k9Ijc3IiByeD0iNCIgcnk9IjIiIGZpbGw9ImN1cnJlbnRDb2xvciIvPgogIDxlbGxpcHNlIGN4PSI0NyIgY3k9Ijc3IiByeD0iNCIgcnk9IjIiIGZpbGw9ImN1cnJlbnRDb2xvciIvPgo8L3N2Zz4K');
-            opacity: 0.02;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 5em;
+            font-weight: 900;
+            color: rgba(83, 109, 138, 0.06);
+            opacity: 0.4;
             pointer-events: none;
             z-index: 0;
-            color: #536D8A;
+            letter-spacing: 12px;
+            white-space: nowrap;
         }
         
         .loading {
@@ -78,10 +86,12 @@ body {
         
         .container {
             max-width: 1200px;
+            width: 100%;
             margin: 0 auto;
             background: white;
             min-height: 100vh;
             display: none;
+            overflow-x: hidden;
         }
         
         .report-header {
@@ -140,8 +150,10 @@ body {
         
         .report-content {
             padding: 50px;
-            max-width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
+            overflow-x: hidden;
+            word-wrap: break-word;
         }
         
         .profile-section {
@@ -469,13 +481,21 @@ body {
                 grid-template-columns: 1fr;
             }
             .report-content {
-                padding: 30px 25px;
+                padding: 30px 20px;
             }
             .report-header {
-                padding: 40px 25px;
+                padding: 40px 20px;
             }
             .report-header h1 {
                 font-size: 2.5em;
+            }
+            body::before {
+                font-size: 3em;
+                letter-spacing: 8px;
+            }
+            .container {
+                width: 100vw;
+                max-width: 100vw;
             }
         }
     </style>
@@ -492,7 +512,7 @@ body {
     </div>
     
     <script>
-        // Get URL parameters
+        // Get URL parameters dengan format pendek
         function getUrlParameter(name) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(name);
@@ -500,7 +520,7 @@ body {
         
         // Load report data
         function loadReportData() {
-            const reportId = getUrlParameter('id');
+            const reportId = getUrlParameter('r') || getUrlParameter('id'); // Support both formats
             const encodedData = getUrlParameter('data');
             
             if (!reportId && !encodedData) {
@@ -526,7 +546,7 @@ body {
             }
             
             if (!reportData) {
-                showError('Report not found', 'The requested report could not be found. The link may have expired or the report ID is invalid.');
+                showError('Report not found', 'The requested report could not be found. The link may have expired or the report ID is invalid. Please contact your coach for assistance.');
                 return;
             }
             
