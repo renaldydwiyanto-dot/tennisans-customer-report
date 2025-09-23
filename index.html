@@ -1,21 +1,4 @@
-body {
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #F9F7F2 0%, #536D8A 100%);
-            min-height: 100vh;
-            position: relative;
-        }
-        
-        body::before {
-            content: '';
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIFJvY2tpbmcgY2hhaXIgYmFzZSAtLT4KICA8cGF0aCBkPSJNMjAsODAgUTMwLDg1IDcwLDg1IFE4MCw4MCA4MCw3NSBRNzAsNzAgMzAsNzAgUTIwLDc1IDIwLDgwIiBmaWxsPSJjdXJyZW50Q29sb3IiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8IS0tIENoYWlyIHNlYXQgLS0+CiAgPHJlY3QgeD0iMjUiIHk9IjU1IiB3aWR0aD0iMzUiIGhlaWdodD0iMjAiIHJ4PSIyIiBmaWxsPSJjdXJyZW50Q29sb3IiLz4KICA8IS0tIENoYWlyIGJhY2sgLS0+CiAgPHJlY3QgeD0iN<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -50,13 +33,13 @@ body {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) rotate(-45deg);
-            font-size: 5em;
-            font-weight: 900;
-            color: rgba(83, 109, 138, 0.06);
-            opacity: 0.4;
+            font-size: 4em;
+            font-weight: 700;
+            color: rgba(83, 109, 138, 0.1);
+            opacity: 0.7;
             pointer-events: none;
             z-index: 0;
-            letter-spacing: 12px;
+            letter-spacing: 10px;
             white-space: nowrap;
         }
         
@@ -92,6 +75,8 @@ body {
             min-height: 100vh;
             display: none;
             overflow-x: hidden;
+            position: relative;
+            z-index: 1;
         }
         
         .report-header {
@@ -103,23 +88,13 @@ body {
             overflow: hidden;
         }
         
-        .report-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-        }
-        
         .tennisans-logo {
             width: 120px;
             height: 120px;
             margin-bottom: 20px;
             filter: brightness(0) saturate(100%) invert(22%) sepia(15%) saturate(1067%) hue-rotate(188deg) brightness(93%) contrast(88%);
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
         
         .report-header h1 {
@@ -128,7 +103,7 @@ body {
             font-weight: 200;
             letter-spacing: 4px;
             position: relative;
-            z-index: 1;
+            z-index: 2;
             text-shadow: 0 4px 20px rgba(83, 109, 138, 0.3);
         }
         
@@ -137,7 +112,7 @@ body {
             margin-bottom: 10px;
             font-weight: 300;
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
         
         .report-header p {
@@ -145,7 +120,7 @@ body {
             font-size: 1.4em;
             font-weight: 300;
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
         
         .report-content {
@@ -198,7 +173,7 @@ body {
             box-shadow: 0 20px 40px rgba(0,0,0,0.08);
             position: relative;
             overflow: hidden;
-            border-left: 6px solid;
+            border-left: 6px solid #536D8A;
             transition: all 0.3s ease;
         }
         
@@ -218,23 +193,18 @@ body {
             border-radius: 0 20px 0 100px;
         }
         
-        .skill-card.forehand { border-left-color: #536D8A; }
-        .skill-card.backhand { border-left-color: #F9F7F2; border-left-width: 6px; border-left-style: solid; box-shadow: -6px 0 0 #536D8A; }
-        .skill-card.serve { border-left-color: #536D8A; }
-        .skill-card.volley { border-left-color: #F9F7F2; border-left-width: 6px; border-left-style: solid; box-shadow: -6px 0 0 #536D8A; }
-        .skill-card.footwork { border-left-color: #536D8A; }
-        .skill-card.mental { border-left-color: #F9F7F2; border-left-width: 6px; border-left-style: solid; box-shadow: -6px 0 0 #536D8A; }
-        
         .skill-header {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
             position: relative;
+            z-index: 1;
         }
         
         .skill-icon {
             font-size: 2.5em;
             margin-right: 15px;
+            color: #536D8A;
         }
         
         .skill-title {
@@ -248,6 +218,8 @@ body {
             color: #495057;
             text-align: justify;
             font-size: 1.05em;
+            position: relative;
+            z-index: 1;
         }
         
         .section-divider {
@@ -275,48 +247,28 @@ body {
             50% { opacity: 1; }
         }
         
-        .strength-section {
-            background: linear-gradient(135deg, #536D8A 0%, #F9F7F2 100%);
-            color: #2c3e50;
+        .strength-section, .development-section, .recommendation-section {
             padding: 50px;
             border-radius: 25px;
             margin-bottom: 50px;
             position: relative;
             overflow: hidden;
             border: 2px solid #536D8A;
+        }
+        
+        .strength-section {
+            background: linear-gradient(135deg, #536D8A 0%, #F9F7F2 100%);
+            color: #2c3e50;
         }
         
         .development-section {
             background: linear-gradient(135deg, #F9F7F2 0%, #536D8A 100%);
             color: #2c3e50;
-            padding: 50px;
-            border-radius: 25px;
-            margin-bottom: 50px;
-            position: relative;
-            overflow: hidden;
-            border: 2px solid #536D8A;
         }
         
         .recommendation-section {
             background: linear-gradient(135deg, #536D8A 0%, #F9F7F2 100%);
             color: #2c3e50;
-            padding: 50px;
-            border-radius: 25px;
-            margin-bottom: 50px;
-            position: relative;
-            overflow: hidden;
-            border: 2px solid #536D8A;
-        }
-        
-        .section-bg-pattern::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="70" cy="70" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
-            opacity: 0.3;
         }
         
         .section-title {
@@ -325,7 +277,7 @@ body {
             text-align: center;
             margin-bottom: 40px;
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
         
         .content-card {
@@ -335,7 +287,7 @@ body {
             margin-bottom: 25px;
             backdrop-filter: blur(10px);
             position: relative;
-            z-index: 1;
+            z-index: 2;
             border: 1px solid rgba(83, 109, 138, 0.2);
         }
         
@@ -364,7 +316,7 @@ body {
             border-radius: 20px;
             backdrop-filter: blur(15px);
             position: relative;
-            z-index: 1;
+            z-index: 2;
             border: 1px solid rgba(83, 109, 138, 0.2);
         }
         
@@ -400,7 +352,7 @@ body {
         }
         
         .coach-notes-section::before {
-            content: '✍️';
+            content: '✏️';
             position: absolute;
             top: 30px;
             right: 30px;
@@ -490,12 +442,19 @@ body {
                 font-size: 2.5em;
             }
             body::before {
-                font-size: 3em;
-                letter-spacing: 8px;
+                font-size: 2.5em;
+                letter-spacing: 6px;
+                opacity: 0.8;
             }
             .container {
                 width: 100vw;
                 max-width: 100vw;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .skill-card {
+                min-width: unset;
             }
         }
     </style>
@@ -507,54 +466,60 @@ body {
         <p>Please wait while we fetch your tennis development analysis</p>
     </div>
     
-    <div class="container" id="reportContainer">
-        <!-- Report content will be dynamically generated here -->
-    </div>
+    <div class="container" id="reportContainer"></div>
     
     <script>
-        // Get URL parameters dengan format pendek
         function getUrlParameter(name) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(name);
         }
         
-        // Load report data
         function loadReportData() {
-            const reportId = getUrlParameter('r') || getUrlParameter('id'); // Support both formats
-            const encodedData = getUrlParameter('data');
+            const reportId = getUrlParameter('r') || getUrlParameter('id');
+            const encodedData = getUrlParameter('d') || getUrlParameter('data');
             
             if (!reportId && !encodedData) {
-                showError('Invalid report link', 'The report link appears to be invalid or corrupted. Please contact your coach for a new link.');
+                showError('Invalid Report Link', 'The report link appears to be invalid. Please contact your coach for a new link.');
                 return;
             }
             
             let reportData = null;
             
-            // Try to get data from URL parameter first
             if (encodedData) {
                 try {
                     reportData = JSON.parse(atob(encodedData));
                 } catch (e) {
-                    console.error('Failed to decode URL data:', e);
+                    console.warn('Failed to decode URL data, trying localStorage...');
                 }
             }
             
-            // Fallback to localStorage (for demo purposes)
             if (!reportData && reportId) {
-                const reports = JSON.parse(localStorage.getItem('tennisansReports') || '{}');
-                reportData = reports[reportId];
+                try {
+                    const reports = JSON.parse(localStorage.getItem('tennisansReports') || '{}');
+                    reportData = reports[reportId];
+                } catch (e) {
+                    console.warn('Failed to load from localStorage');
+                }
             }
             
             if (!reportData) {
-                showError('Report not found', 'The requested report could not be found. The link may have expired or the report ID is invalid. Please contact your coach for assistance.');
+                showError('Report Not Found', 'The requested report could not be found. Please contact your coach for assistance.');
                 return;
             }
             
-            // Generate and display the report
+            if (!reportData.studentName && !reportData.coachName) {
+                showError('Invalid Report Data', 'The report data appears to be corrupted. Please contact your coach for a new report link.');
+                return;
+            }
+            
             setTimeout(() => {
-                generateReport(reportData);
-                hideLoading();
-            }, 1500); // Simulate loading time for better UX
+                try {
+                    generateReport(reportData);
+                    hideLoading();
+                } catch (error) {
+                    showError('Report Generation Failed', 'There was an error generating your report. Please try refreshing the page.');
+                }
+            }, 1200);
         }
         
         function hideLoading() {
@@ -566,12 +531,20 @@ body {
             setTimeout(() => {
                 document.getElementById('loadingScreen').innerHTML = `
                     <div class="error-section">
-                        <div class="error-icon">❌</div>
+                        <div class="error-icon">⚠️</div>
                         <h2 class="error-title">${title}</h2>
                         <p class="error-message">${message}</p>
+                        <div style="margin-top: 30px;">
+                            <button onclick="window.location.reload()" style="background: #536D8A; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-size: 14px; margin-right: 10px;">
+                                🔄 Retry
+                            </button>
+                            <button onclick="window.history.back()" style="background: #6c757d; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-size: 14px;">
+                                ← Go Back
+                            </button>
+                        </div>
                     </div>
                 `;
-            }, 1000);
+            }, 800);
         }
         
         function generateReport(data) {
@@ -580,7 +553,7 @@ body {
                 'Belum ditentukan';
                 
             const reportHtml = `
-                <div class="report-header section-bg-pattern">
+                <div class="report-header">
                     <div style="margin-bottom: 20px;">
                         <svg class="tennisans-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                             <path d="M20,80 Q30,85 70,85 Q80,80 80,75 Q70,70 30,70 Q20,75 20,80" fill="currentColor" stroke="currentColor" stroke-width="2"/>
@@ -613,7 +586,7 @@ body {
                     <h1>TENNISANS PREMIUM</h1>
                     <h2>PROFESSIONAL PROGRESS ANALYSIS</h2>
                     <p>Comprehensive Player Development Report</p>
-                    <div style="width: 120px; height: 6px; background: linear-gradient(90deg, rgba(255,255,255,0.8), transparent, rgba(255,255,255,0.8)); margin: 30px auto; border-radius: 3px; position: relative; z-index: 1;"></div>
+                    <div style="width: 120px; height: 6px; background: linear-gradient(90deg, rgba(83,109,138,0.8), transparent, rgba(83,109,138,0.8)); margin: 30px auto; border-radius: 3px; position: relative; z-index: 2;"></div>
                 </div>
                 
                 <div class="report-content">
@@ -659,28 +632,7 @@ body {
                             </div>
                             <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0;">
                                 <strong style="color: #495057;">Level:</strong> 
-                                <span style="background: linear-gradient(135deg, #536D8A, #F9F7F2); color: #2c3e50; padding: 8px 20px; border-radius: 25px; font-size: 0.9em; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: 2px solid #536D8A;">${data.currentLevel}</span>
-                            </div>>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(30, 60, 114, 0.1);">
-                                <strong style="color: #495057;">Program:</strong> 
-                                <span style="color: #2c3e50; font-weight: 500;">${data.program || 'Tidak dipilih'}</span>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(30, 60, 114, 0.1);">
-                                <strong style="color: #495057;">Period:</strong> 
-                                <span style="color: #2c3e50; font-weight: 500;">${formattedPeriod}</span>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(30, 60, 114, 0.1);">
-                                <strong style="color: #495057;">Sessions:</strong> 
-                                <span style="color: #2c3e50; font-weight: 500;">${data.totalSessions || 'Tidak diisi'}</span>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(30, 60, 114, 0.1);">
-                                <strong style="color: #495057;">Coach:</strong> 
-                                <span style="color: #2c3e50; font-weight: 500;">${data.coachName || 'Tidak diisi'}</span>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0;">
-                                <strong style="color: #495057;">Level:</strong> 
-                                <span style="background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 8px 20px; border-radius: 25px; font-size: 0.9em; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">${data.currentLevel}</span>
+                                <span style="background: linear-gradient(135deg, #536D8A, #F9F7F2); color: #2c3e50; padding: 8px 20px; border-radius: 25px; font-size: 0.9em; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: 2px solid #536D8A;">${data.currentLevel || 'Tidak diisi'}</span>
                             </div>
                         </div>
                     </div>
@@ -703,12 +655,12 @@ body {
         
         function generateSkillsSection(data) {
             const skills = [
-                { key: 'forehandAnalysis', title: 'Forehand Analysis', icon: '🎯', color: '#007bff', class: 'forehand' },
-                { key: 'backhandAnalysis', title: 'Backhand Development', icon: '🎾', color: '#6f42c1', class: 'backhand' },
-                { key: 'serveAnalysis', title: 'Serve & Return Analysis', icon: '⚡', color: '#e83e8c', class: 'serve' },
-                { key: 'volleyAnalysis', title: 'Net Play & Volley Assessment', icon: '🏃', color: '#fd7e14', class: 'volley' },
-                { key: 'footworkAnalysis', title: 'Footwork & Movement Analysis', icon: '👟', color: '#20c997', class: 'footwork' },
-                { key: 'mentalAnalysis', title: 'Mental Game & Strategic Thinking', icon: '🧠', color: '#6610f2', class: 'mental' }
+                { key: 'forehandAnalysis', title: 'Forehand Analysis', icon: '🎯' },
+                { key: 'backhandAnalysis', title: 'Backhand Development', icon: '🎾' },
+                { key: 'serveAnalysis', title: 'Serve & Return Analysis', icon: '⚡' },
+                { key: 'volleyAnalysis', title: 'Net Play & Volley Assessment', icon: '🏃' },
+                { key: 'footworkAnalysis', title: 'Footwork & Movement Analysis', icon: '👟' },
+                { key: 'mentalAnalysis', title: 'Mental Game & Strategic Thinking', icon: '🧠' }
             ];
             
             const hasAnySkillAnalysis = skills.some(skill => data[skill.key]);
@@ -729,9 +681,9 @@ body {
             const skillCards = skills
                 .filter(skill => data[skill.key])
                 .map(skill => `
-                    <div class="skill-card ${skill.class}">
+                    <div class="skill-card">
                         <div class="skill-header">
-                            <div class="skill-icon" style="color: #536D8A;">${skill.icon}</div>
+                            <div class="skill-icon">${skill.icon}</div>
                             <div class="skill-title">${skill.title}</div>
                         </div>
                         <div class="skill-analysis-text">${data[skill.key]}</div>
@@ -744,7 +696,6 @@ body {
                     <div class="section-divider"></div>
                     <h3 style="color: #536D8A; margin-bottom: 40px; font-size: 2.5em; text-align: center; font-weight: 300; position: relative;">
                         🏆 TECHNICAL SKILLS COMPREHENSIVE ANALYSIS
-                        <div style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 100px; height: 4px; background: linear-gradient(90deg, #536D8A, #F9F7F2); border-radius: 2px;"></div>
                     </h3>
                     <div class="skills-grid">
                         ${skillCards}
@@ -754,118 +705,141 @@ body {
         }
         
         function generateStrengthsSection(data) {
-            if (!data.strengths && !data.achievements) {
-                return '';
+            if (!data.strengths) {
+                return `
+                    <div class="strength-section">
+                        <h3 class="section-title">💪 CURRENT STRENGTHS & ACHIEVEMENTS</h3>
+                        <div style="background: rgba(83, 109, 138, 0.1); border: 2px solid rgba(83, 109, 138, 0.2); padding: 40px; border-radius: 20px; text-align: center;">
+                            <div style="font-size: 3em; margin-bottom: 20px;">⏳</div>
+                            <h4 style="color: #536D8A; margin-bottom: 15px; font-size: 1.6em;">Strengths Assessment Pending</h4>
+                            <p style="color: #6c757d; font-size: 1.1em;">Player strengths analysis belum diisi oleh coach.</p>
+                        </div>
+                    </div>
+                `;
             }
             
             return `
-                <div class="section-divider"></div>
-                <div class="strength-section section-bg-pattern">
-                    <h3 class="section-title">💎 STRENGTHS & KEY ACHIEVEMENTS</h3>
-                    
-                    ${data.strengths ? `
+                <div class="strength-section">
+                    <h3 class="section-title">💪 CURRENT STRENGTHS & ACHIEVEMENTS</h3>
                     <div class="content-card">
-                        <h4>🌟 Major Strengths Identified</h4>
+                        <h4>🌟 Key Strengths</h4>
                         <p>${data.strengths}</p>
-                    </div>` : ''}
-                    
-                    ${data.achievements ? `
-                    <div class="content-card">
-                        <h4>🏆 Notable Achievements</h4>
-                        <p>${data.achievements}</p>
-                    </div>` : ''}
+                    </div>
                 </div>
             `;
         }
         
         function generateDevelopmentSection(data) {
-            if (!data.improvements && !data.secondaryImprovements) {
-                return '';
+            if (!data.areasForImprovement) {
+                return `
+                    <div class="development-section">
+                        <h3 class="section-title">🎯 DEVELOPMENT AREAS & FOCUS POINTS</h3>
+                        <div style="background: rgba(83, 109, 138, 0.1); border: 2px solid rgba(83, 109, 138, 0.2); padding: 40px; border-radius: 20px; text-align: center;">
+                            <div style="font-size: 3em; margin-bottom: 20px;">⏳</div>
+                            <h4 style="color: #536D8A; margin-bottom: 15px; font-size: 1.6em;">Development Assessment Pending</h4>
+                            <p style="color: #6c757d; font-size: 1.1em;">Areas for improvement belum diisi oleh coach.</p>
+                        </div>
+                    </div>
+                `;
             }
             
             return `
-                <div class="development-section section-bg-pattern">
-                    <h3 class="section-title">🎯 AREAS REQUIRING DEVELOPMENT</h3>
-                    
-                    ${data.improvements ? `
+                <div class="development-section">
+                    <h3 class="section-title">🎯 DEVELOPMENT AREAS & FOCUS POINTS</h3>
                     <div class="content-card">
-                        <h4>🔧 Primary Development Focus</h4>
-                        <p>${data.improvements}</p>
-                    </div>` : ''}
-                    
-                    ${data.secondaryImprovements ? `
-                    <div class="content-card">
-                        <h4>📈 Secondary Development Areas</h4>
-                        <p>${data.secondaryImprovements}</p>
-                    </div>` : ''}
+                        <h4>📈 Areas for Improvement</h4>
+                        <p>${data.areasForImprovement}</p>
+                    </div>
                 </div>
             `;
         }
         
         function generateRecommendationsSection(data) {
-            const hasRecommendations = data.immediateFocus || data.longTermPlan || Object.values(data.recommendations).some(r => r);
+            const hasRecommendations = data.technicalRecommendations || data.practiceRecommendations || data.nextSteps;
             
             if (!hasRecommendations) {
-                return '';
+                return `
+                    <div class="recommendation-section">
+                        <h3 class="section-title">🚀 PROFESSIONAL RECOMMENDATIONS</h3>
+                        <div style="background: rgba(83, 109, 138, 0.1); border: 2px solid rgba(83, 109, 138, 0.2); padding: 40px; border-radius: 20px; text-align: center;">
+                            <div style="font-size: 3em; margin-bottom: 20px;">⏳</div>
+                            <h4 style="color: #536D8A; margin-bottom: 15px; font-size: 1.6em;">Recommendations Pending</h4>
+                            <p style="color: #6c757d; font-size: 1.1em;">Professional recommendations belum diisi oleh coach.</p>
+                        </div>
+                    </div>
+                `;
             }
             
-            const checkedRecommendations = Object.entries(data.recommendations)
-                .filter(([key, value]) => value)
-                .map(([key, value]) => {
-                    const labels = {
-                        continueCurrent: { icon: '✓', text: 'Continue current program structure', color: '#28a745' },
-                        upgradePrivate: { icon: '⭐', text: 'Upgrade to Private Coaching', color: '#ffc107' },
-                        sparringReady: { icon: '🥊', text: 'Ready for competitive sparring', color: '#007bff' },
-                        tournamentReady: { icon: '🏆', text: 'Tournament/Competition ready', color: '#dc3545' },
-                        intensiveTraining: { icon: '💪', text: 'Intensive skill-specific training', color: '#6f42c1' }
-                    };
-                    
-                    const label = labels[key];
-                    return `<div class="step-badge" style="background: rgba(255,255,255,0.2); border-left-color: ${label.color};"><span style="margin-right: 10px; font-size: 1.2em;">${label.icon}</span>${label.text}</div>`;
-                });
+            let content = '<div class="recommendations-grid">';
+            
+            if (data.technicalRecommendations) {
+                content += `
+                    <div class="content-card">
+                        <h4>⚙️ Technical Development</h4>
+                        <p>${data.technicalRecommendations}</p>
+                    </div>
+                `;
+            }
+            
+            if (data.practiceRecommendations) {
+                content += `
+                    <div class="content-card">
+                        <h4>🏃 Practice Focus</h4>
+                        <p>${data.practiceRecommendations}</p>
+                    </div>
+                `;
+            }
+            
+            content += '</div>';
+            
+            if (data.nextSteps) {
+                const steps = data.nextSteps.split('\n').filter(step => step.trim());
+                if (steps.length > 0) {
+                    content += `
+                        <div class="next-steps-container">
+                            <h4 style="color: #536D8A; margin-bottom: 25px; font-size: 1.6em; text-align: center;">🗓️ Recommended Next Steps</h4>
+                            <div class="steps-grid">
+                                ${steps.map((step, index) => `
+                                    <div class="step-badge">
+                                        <strong style="color: #536D8A;">Step ${index + 1}:</strong><br>
+                                        <span style="color: #495057;">${step.trim()}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+            }
             
             return `
-                <div class="recommendation-section section-bg-pattern">
-                    <h3 class="section-title">📋 PROFESSIONAL COACHING RECOMMENDATIONS</h3>
-                    
-                    ${data.immediateFocus || data.longTermPlan ? `
-                    <div class="recommendations-grid">
-                        ${data.immediateFocus ? `
-                        <div class="content-card">
-                            <h4>⚡ Immediate Training Focus</h4>
-                            <p>${data.immediateFocus}</p>
-                        </div>` : ''}
-                        
-                        ${data.longTermPlan ? `
-                        <div class="content-card">
-                            <h4>🎯 Long-term Development</h4>
-                            <p>${data.longTermPlan}</p>
-                        </div>` : ''}
-                    </div>` : ''}
-                    
-                    ${checkedRecommendations.length > 0 ? `
-                    <div class="next-steps-container">
-                        <h4 style="margin-bottom: 25px; font-size: 1.4em; text-align: center;">✅ Recommended Next Steps</h4>
-                        <div class="steps-grid">
-                            ${checkedRecommendations.join('')}
-                        </div>
-                    </div>` : ''}
+                <div class="recommendation-section">
+                    <h3 class="section-title">🚀 PROFESSIONAL RECOMMENDATIONS</h3>
+                    ${content}
                 </div>
             `;
         }
         
         function generateCoachNotesSection(data) {
-            if (!data.coachNotes) {
-                return '';
+            if (!data.additionalNotes) {
+                return `
+                    <div class="coach-notes-section">
+                        <h3 style="color: #536D8A; margin-bottom: 30px; font-size: 2.2em; font-weight: 300; text-align: center;">📝 COACH'S PERSONAL NOTES</h3>
+                        <div style="background: rgba(83, 109, 138, 0.1); border: 2px solid rgba(83, 109, 138, 0.2); padding: 40px; border-radius: 20px; text-align: center;">
+                            <div style="font-size: 3em; margin-bottom: 20px;">⏳</div>
+                            <h4 style="color: #536D8A; margin-bottom: 15px; font-size: 1.6em;">Personal Notes Pending</h4>
+                            <p style="color: #6c757d; font-size: 1.1em;">Coach's personal notes belum ditambahkan.</p>
+                        </div>
+                    </div>
+                `;
             }
             
             return `
-                <div class="section-divider"></div>
                 <div class="coach-notes-section">
-                    <div style="color: #536D8A; margin-bottom: 15px; font-size: 1.8em; font-weight: 300;">✍️ Coach's Personal Insights</div>
-                    <div style="background: white; padding: 30px; border-radius: 15px; border-left: 6px solid #536D8A; box-shadow: 0 10px 25px rgba(0,0,0,0.08); position: relative;">
-                        <p style="line-height: 2; color: #2c3e50; text-align: justify; font-size: 1.1em; font-style: italic;">${data.coachNotes}</p>
-                        <div style="position: absolute; top: 20px; right: 20px; font-size: 2em; opacity: 0.2;">💭</div>
+                    <h3 style="color: #536D8A; margin-bottom: 30px; font-size: 2.2em; font-weight: 300; text-align: center;">📝 COACH'S PERSONAL NOTES</h3>
+                    <div style="background: rgba(83, 109, 138, 0.1); border: 2px solid rgba(83, 109, 138, 0.2); padding: 35px; border-radius: 20px; backdrop-filter: blur(15px);">
+                        <div style="line-height: 1.8; color: #495057; text-align: justify; font-size: 1.1em;">
+                            ${data.additionalNotes}
+                        </div>
                     </div>
                 </div>
             `;
@@ -873,44 +847,25 @@ body {
         
         function generateFooterSection(data) {
             return `
-                <div class="section-divider"></div>
-                <div class="footer-section section-bg-pattern">
-                    <div style="margin-bottom: 25px;">
-                        <svg style="width: 80px; height: 80px; filter: brightness(0) saturate(100%) invert(22%) sepia(15%) saturate(1067%) hue-rotate(188deg) brightness(93%) contrast(88%);" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20,80 Q30,85 70,85 Q80,80 80,75 Q70,70 30,70 Q20,75 20,80" fill="currentColor" stroke="currentColor" stroke-width="2"/>
-                            <rect x="25" y="55" width="35" height="20" rx="2" fill="currentColor"/>
-                            <rect x="55" y="35" width="8" height="25" rx="2" fill="currentColor"/>
-                            <ellipse cx="40" cy="45" rx="8" ry="12" fill="currentColor"/>
-                            <circle cx="42" cy="30" r="6" fill="currentColor"/>
-                            <path d="M36,28 Q42,25 48,28" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <line x1="35" y1="40" x2="65" y2="25" stroke="currentColor" stroke-width="3"/>
-                            <ellipse cx="68" cy="22" rx="8" ry="12" fill="none" stroke="currentColor" stroke-width="3"/>
-                            <g stroke="currentColor" stroke-width="0.5">
-                                <line x1="62" y1="15" x2="62" y2="29"/>
-                                <line x1="65" y1="15" x2="65" y2="29"/>
-                                <line x1="68" y1="15" x2="68" y2="29"/>
-                                <line x1="71" y1="15" x2="71" y2="29"/>
-                                <line x1="74" y1="15" x2="74" y2="29"/>
-                                <line x1="61" y1="18" x2="75" y2="18"/>
-                                <line x1="61" y1="21" x2="75" y2="21"/>
-                                <line x1="61" y1="24" x2="75" y2="24"/>
-                                <line x1="61" y1="27" x2="75" y2="27"/>
-                            </g>
-                            <circle cx="78" cy="15" r="4" fill="currentColor"/>
-                            <path d="M74,15 Q78,12 82,15" fill="none" stroke="white" stroke-width="1"/>
-                            <line x1="38" y1="57" x2="35" y2="75" stroke="currentColor" stroke-width="3"/>
-                            <line x1="42" y1="57" x2="45" y2="75" stroke="currentColor" stroke-width="3"/>
-                            <ellipse cx="33" cy="77" rx="4" ry="2" fill="currentColor"/>
-                            <ellipse cx="47" cy="77" rx="4" ry="2" fill="currentColor"/>
-                        </svg>
-                    </div>
-                    <h2 style="margin-bottom: 15px; font-weight: 200; letter-spacing: 2px; font-size: 2.5em; position: relative; z-index: 1;">TENNISANS PREMIUM COACHING</h2>
-                    <p style="opacity: 0.95; margin-bottom: 25px; font-size: 1.3em; font-weight: 300; position: relative; z-index: 1;">Professional Tennis Development Program</p>
-                    <div style="width: 150px; height: 4px; background: linear-gradient(90deg, rgba(255,255,255,0.8), transparent, rgba(255,255,255,0.8)); margin: 0 auto 30px; border-radius: 2px; position: relative; z-index: 1;"></div>
-                    <p style="font-size: 1.1em; opacity: 0.9; position: relative; z-index: 1;">Report compiled by: <strong style="color: #2c3e50;">${data.coachName || 'Coach Team'}</strong></p>
-                    <p style="font-size: 1em; opacity: 0.8; position: relative; z-index: 1;">Generated on ${new Date().toLocaleDateString('id-ID', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}</p>
-                    <div style="margin-top: 40px; padding: 25px; background: rgba(83, 109, 138, 0.1); border-radius: 15px; backdrop-filter: blur(15px); position: relative; z-index: 1; border: 1px solid rgba(83, 109, 138, 0.2);">
-                        <p style="font-size: 1em; line-height: 1.8; color: #2c3e50;">This comprehensive analysis represents professional coaching assessment based on systematic observation and technical evaluation. For questions regarding this report or to schedule follow-up consultations, please contact your coaching team.</p>
+                <div class="footer-section">
+                    <div style="font-size: 4em; margin-bottom: 20px; color: #2c3e50;">🏆</div>
+                    <h3 style="font-size: 2.5em; margin-bottom: 20px; font-weight: 300;">Excellence in Tennis Development</h3>
+                    <p style="font-size: 1.3em; opacity: 0.9; max-width: 600px; margin: 0 auto 30px;">
+                        Continue your tennis journey with dedication and focused practice. Every great player started with a single lesson.
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 40px;">
+                        <div style="background: rgba(83, 109, 138, 0.1); padding: 25px; border-radius: 15px; backdrop-filter: blur(10px); border: 1px solid rgba(83, 109, 138, 0.2);">
+                            <h4 style="color: #536D8A; margin-bottom: 10px;">🎯 Focus</h4>
+                            <p style="color: #6c757d; font-size: 0.95em;">Targeted skill development</p>
+                        </div>
+                        <div style="background: rgba(83, 109, 138, 0.1); padding: 25px; border-radius: 15px; backdrop-filter: blur(10px); border: 1px solid rgba(83, 109, 138, 0.2);">
+                            <h4 style="color: #536D8A; margin-bottom: 10px;">💪 Practice</h4>
+                            <p style="color: #6c757d; font-size: 0.95em;">Consistent improvement</p>
+                        </div>
+                        <div style="background: rgba(83, 109, 138, 0.1); padding: 25px; border-radius: 15px; backdrop-filter: blur(10px); border: 1px solid rgba(83, 109, 138, 0.2);">
+                            <h4 style="color: #536D8A; margin-bottom: 10px;">🚀 Growth</h4>
+                            <p style="color: #6c757d; font-size: 0.95em;">Continuous progress</p>
+                        </div>
                     </div>
                 </div>
             `;
@@ -919,33 +874,35 @@ body {
         function generateContactSection() {
             return `
                 <div class="contact-section">
-                    <h4 style="margin-bottom: 20px; font-size: 1.8em; font-weight: 300;">📞 Follow-up Consultation Available</h4>
-                    <p style="margin-bottom: 20px; opacity: 0.95; font-size: 1.1em;">Untuk diskusi lebih lanjut mengenai progress report ini atau merencanakan program lanjutan</p>
+                    <h3 style="font-size: 2em; margin-bottom: 20px; font-weight: 300;">📞 Contact & Support</h3>
+                    <p style="font-size: 1.2em; margin-bottom: 30px; opacity: 0.9;">
+                        For questions about this report or to schedule your next session
+                    </p>
                     <div class="contact-grid">
                         <div class="contact-card">
-                            <div style="font-size: 2em; margin-bottom: 10px;">📱</div>
-                            <p style="font-size: 0.95em; opacity: 0.8; margin-bottom: 5px;">WhatsApp</p>
-                            <p style="font-weight: 600; font-size: 1.1em;">+6281321310304 (Admin)</p>
+                            <div style="font-size: 2em; margin-bottom: 15px;">📧</div>
+                            <h4 style="color: #536D8A; margin-bottom: 8px;">Email Support</h4>
+                            <p style="color: #6c757d; font-size: 0.95em;">info@tennisans.com</p>
                         </div>
                         <div class="contact-card">
-                            <div style="font-size: 2em; margin-bottom: 10px;">📧</div>
-                            <p style="font-size: 0.95em; opacity: 0.8; margin-bottom: 5px;">Email</p>
-                            <p style="font-weight: 600; font-size: 1.1em;">tennisanscrb@gmail.com</p>
+                            <div style="font-size: 2em; margin-bottom: 15px;">📱</div>
+                            <h4 style="color: #536D8A; margin-bottom: 8px;">WhatsApp</h4>
+                            <p style="color: #6c757d; font-size: 0.95em;">+62 xxx-xxxx-xxxx</p>
                         </div>
                         <div class="contact-card">
-                            <div style="font-size: 2em; margin-bottom: 10px;">📸</div>
-                            <p style="font-size: 0.95em; opacity: 0.8; margin-bottom: 5px;">Instagram</p>
-                            <p style="font-weight: 600; font-size: 1.1em;">@tennisans.crb</p>
+                            <div style="font-size: 2em; margin-bottom: 15px;">🌐</div>
+                            <h4 style="color: #536D8A; margin-bottom: 8px;">Website</h4>
+                            <p style="color: #6c757d; font-size: 0.95em;">www.tennisans.com</p>
+                        </div>
+                        <div class="contact-card">
+                            <div style="font-size: 2em; margin-bottom: 15px;">📍</div>
+                            <h4 style="color: #536D8A; margin-bottom: 8px;">Location</h4>
+                            <p style="color: #6c757d; font-size: 0.95em;">Jakarta Tennis Courts</p>
                         </div>
                     </div>
                 </div>
             `;
         }
-        
-        // Initialize the report when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            loadReportData();
-        });
     </script>
 </body>
 </html>
